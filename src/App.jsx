@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className='bg-amber-50 min-h-screen'>
+      <h1 className='text-center text-3xl py-3 text-white bg-[#2C3930]'>TODO-TASK</h1>
       <div className='flex justify-around border border-b-2 bg-[#2C3930] pt-4'>
         {["All", "High", "Medium", "Low"].map((tab, i) => {
           return (
