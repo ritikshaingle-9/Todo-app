@@ -90,6 +90,29 @@ function App() {
           <option value="Low">Low</option>
         </select>
 
+        <button
+          className='text-xl bg-yellow-500 md:px-10 px-5 py-2 rounded-md md:ml-5 mt-5 md:mt-0 w-[150px] cursor-pointer'
+          onClick={() => {
+            if (!todoItem.task) {
+              toast.error('Please enter task');
+              return;
+            }
+            if (!todoItem.priority) {
+              toast.error('Please select priority');
+              return;
+            }
+
+            setSelectedTab(todoItem.priority);
+            setTodoList([todoItem, ...todoList]);
+            setTodoItem({
+              task: "",
+              priority: "",
+            });
+            toast.success('Task Added Successfully');
+          }}
+        >
+          Add
+        </button>
       </div>
       <Toaster />
     </div>
