@@ -19,10 +19,7 @@ function App() {
     localStorage.setItem("todoList", JSON.stringify(todoList));
   }, [todoList]);
 
-  const onDelete = (index) => {
-    const listAfterDeletion = todoList.filter((_, i) => i !== index);
-    setTodoList(listAfterDeletion);
-  };
+  
 
   const filteredTodoList = selectedTab === "All" 
     ? todoList 
