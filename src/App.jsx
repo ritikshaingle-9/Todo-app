@@ -84,10 +84,10 @@ function App() {
           }}
           value={todoItem.priority}
         >
-          <option value="">Select Priority</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
+          <option value="" className='bg-slate-300'>Select Priority</option>
+          <option value="High" className='bg-slate-300'>High</option>
+          <option value="Medium" className='bg-slate-300'>Medium</option>
+          <option value="Low" className='bg-slate-300'>Low</option>
         </select>
 
         <button
