@@ -24,7 +24,9 @@ function App() {
     setTodoList(listAfterDeletion);
   };
 
-  
+  const filteredTodoList = selectedTab === "All" 
+    ? todoList 
+    : todoList.filter(taskItem => taskItem.priority === selectedTab);
 
   return (
     <div className='bg-amber-50 min-h-screen'>
@@ -69,7 +71,7 @@ function App() {
           }}
           value={todoItem.task}
           className='bg-white text-xl md:w-[400px] rounded-md p-2 focus:outline-none w-[300px]'
-          placeholder='Enter Task'
+          placeholder='Enter a task'
         />
 
         <select
