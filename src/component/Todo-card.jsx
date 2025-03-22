@@ -16,7 +16,8 @@ function TodoCard({ task, priority, index, onDelete }) {
   return (
     <div className={`bg-white border-1 border-gray-200 shadow-lg p-5 m-5 rounded-md relative ${TASK_PRIORITY_CLASSES[priority]}`}>
       <span className={`block w-[100px] text-center rounded-full border-1 ${BADGE_PRIORITY_CLASSES[priority]}`}>
-        {priority}
+        {priority}⚡
+        
       </span>
 
       <h1 className="mt-2 text-xl">{task}</h1>
