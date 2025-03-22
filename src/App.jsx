@@ -30,11 +30,11 @@ function App() {
 
   return (
     <div className='bg-amber-50 min-h-screen'>
-      <div className='flex justify-around border border-b-2 border-slate-400 pt-4'>
+      <div className='flex justify-around border border-b-2 bg-[#2C3930] pt-4'>
         {["All", "High", "Medium", "Low"].map((tab, i) => {
           return (
             <span 
-              className={`py-1 text-lg md:text-xl text-center w-[100px] md:w-[250px] rounded-tl-lg rounded-tr-lg block cursor-pointer ${tab === selectedTab ? "bg-slate-400 text-white" : "bg-white"}`} 
+              className={`py-1 text-lg md:text-xl text-center w-[100px] md:w-[250px] rounded-tl-lg rounded-tr-lg block cursor-pointer ${tab === selectedTab ? "bg-yellow-500 text-white" : "bg-white"}`} 
               key={i}  
               onClick={() => setSelectedTab(tab)}  
             >
@@ -60,7 +60,7 @@ function App() {
         })}
       </div>
 
-      <div className='fixed bottom-0 left-0 w-full bg-slate-400 p-10 flex md:flex-row flex-col items-center justify-center gap-y-4'>
+      <div className='fixed bottom-0 left-0 w-full bg-[#2C3930] p-10 flex md:flex-row flex-col items-center justify-center gap-y-4'>
         <input
           type="text"
           onChange={(e) => {
